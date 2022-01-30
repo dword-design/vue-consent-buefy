@@ -11,8 +11,8 @@
           </p>
           <p>
             See the
-            <b-button class="is-link" @click="openDataPrivacy">
-              data privacy
+            <b-button class="is-link" @click="openPrivacyPolicy">
+              privacy policy
             </b-button>
             for details.
           </p>
@@ -56,11 +56,11 @@ export default {
     editedSettings: {},
   }),
   methods: {
-    openDataPrivacy() {
+    openPrivacyPolicy() {
       return this.$buefy.modal.open({
         component: 'b-card-modal',
         parent: this,
-        props: { inner: 'app-data-privacy' },
+        props: { inner: 'app-privacy-policy' },
       })
     },
     submit($event) {

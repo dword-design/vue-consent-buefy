@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/dword-design/vue-consent-buefy/compare/v1.0.0...v1.0.1) (2022-01-30)
+
+
+### Bug Fixes
+
+* data privacy -> privacy policy ([5e03b90](https://github.com/dword-design/vue-consent-buefy/commit/5e03b90b9b277631964ace79b40e40f03c81c464))
+
 # 1.0.0 (2022-01-29)
 
 

@@ -4,12 +4,23 @@
       <div class="card-content">
         <div class="content">
           <h2>Cookie Settings</h2>
-          <p>
+          <p v-if="locale === 'de'">
+            Indem du Cookies akzeptierst hilfst du mir, die
+            Benutzerfreundlichkeit zu verbessern, Benutzertraffic zu messen und
+            das Nutzerverhalten bzw. -bedürfnisse besser zu verstehen.
+          </p>
+          <p v-else>
             By accepting cookies, you help me to improve your browsing
             experience, to measure traffic, and to understand user behavior and
             needs.
           </p>
-          <p>
+          <p v-if="locale === 'de'">
+            Für Details, siehe die
+            <b-button class="is-link" @click="openPrivacyPolicy">
+              Datenschutzerklärung </b-button
+            >.
+          </p>
+          <p v-else>
             See the
             <b-button class="is-link" @click="openPrivacyPolicy">
               privacy policy
@@ -19,23 +30,40 @@
           <hr />
           <form @submit.prevent="submit">
             <b-field
-              message="These cookies are needed to keep the website running."
+              :message="
+                locale === 'de'
+                  ? 'Diese Cookies werden für den Betrieb der Website benötigt'
+                  : 'These cookies are needed to keep the website running.'
+              "
             >
-              <b-switch :value="true" disabled>Essential cookies</b-switch>
+              <b-switch :value="true" disabled>{{
+                locale === 'de' ? 'Essenzielle Cookies' : 'Essential cookies'
+              }}</b-switch>
             </b-field>
             <b-field
-              message="These cookies are needed to collect anonymous user statistics."
+              :message="
+                locale === 'de'
+                  ? 'Diese Cookies werden zum Ergeben anonymer Nutzerstatistiken benötigt.'
+                  : 'These cookies are needed to collect anonymous user statistics.'
+              "
             >
-              <b-switch v-model="editedSettings.statistics"
-                >Statistics cookies</b-switch
-              >
+              <b-switch v-model="editedSettings.statistics">{{
+                locale === 'de' ? 'Statistik-Cookies' : 'Statistics cookies'
+              }}</b-switch>
             </b-field>
             <div class="buttons is-right">
-              <b-button name="save" native-type="submit"
-                >Save settings</b-button
-              >
-              <b-button name="accept-all" native-type="submit" type="is-primary"
-                >Accept all cookies</b-button
+              <b-button name="save" native-type="submit">{{
+                locale === 'de' ? 'Einstellungen speichern' : 'Save settings'
+              }}</b-button>
+              <b-button
+                name="accept-all"
+                native-type="submit"
+                type="is-primary"
+                >{{
+                  locale === 'de'
+                    ? 'Alle Cookies akzeptieren'
+                    : 'Accept all cookies'
+                }}</b-button
               >
             </div>
           </form>
@@ -75,6 +103,9 @@ export default {
     if (Object.keys(this.$consent.settings).length === 0) {
       this.$consent.open()
     }
+  },
+  props: {
+    locale: { default: 'en', type: String },
   },
   watch: {
     isOpened: {

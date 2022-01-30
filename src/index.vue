@@ -21,7 +21,7 @@
             needs.
           </p>
           <p v-if="computedLocale === 'de'">
-            Für Details, siehe die
+            Für Details siehe die
             <b-button class="is-link" @click="openPrivacyPolicy">
               Datenschutzerklärung </b-button
             >.

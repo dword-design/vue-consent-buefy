@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/dword-design/vue-consent-buefy/compare/v1.0.3...v1.0.4) (2022-01-30)
+
+
+### Bug Fixes
+
+* foo ([6127837](https://github.com/dword-design/vue-consent-buefy/commit/61278371eca84c37d8bc80e439d3b1a5513fd45b))
+
 ## [1.0.3](https://github.com/dword-design/vue-consent-buefy/compare/v1.0.2...v1.0.3) (2022-01-30)
 
 

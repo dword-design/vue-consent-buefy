@@ -3,7 +3,13 @@
     <div class="card">
       <div class="card-content">
         <div class="content">
-          <h2>Cookie Settings</h2>
+          <h2>
+            {{
+              computedLocale === 'de'
+                ? 'Cookie-Einstellungen'
+                : 'Cookie Settings'
+            }}
+          </h2>
           <p v-if="computedLocale === 'de'">
             Indem du Cookies akzeptierst hilfst du mir, die
             Benutzerfreundlichkeit zu verbessern, Benutzertraffic zu messen und

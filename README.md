@@ -66,7 +66,7 @@ $ yarn add vue-consent-buefy
 
 Add to local components:
 
-```js
+```html
 <script>
 import VueConsentBuefy from 'vue-consent-buefy'
 

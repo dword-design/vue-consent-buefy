@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/dword-design/vue-consent-buefy/compare/v1.0.6...v1.0.7) (2022-09-21)
+
+
+### Bug Fixes
+
+* update config files ([f091876](https://github.com/dword-design/vue-consent-buefy/commit/f091876353894117056ce842fd1fa045085b1292))
+
 ## [1.0.6](https://github.com/dword-design/vue-consent-buefy/compare/v1.0.5...v1.0.6) (2022-02-01)
 
 

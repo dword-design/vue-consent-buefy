@@ -1,5 +1,5 @@
 <template>
-  <b-modal :active="$consent.isOpened" :can-cancel="false" :width="640">
+  <b-modal :model-value="$consent.isOpened" :can-cancel="false" :width="640">
     <div class="card">
       <div class="card-content">
         <div class="content">

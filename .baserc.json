@@ -1,3 +1,5 @@
 {
-  "name": "@dword-design/component"
+  "name": "@dword-design/component",
+  "componentName": "BConsent",
+  "testInContainer": true
 }

@@ -58,21 +58,21 @@
 
 ```bash
 # npm
-$ npm install vue-consent-buefy
+$ npm install @dword-design/vue-consent-buefy
 
 # Yarn
-$ yarn add vue-consent-buefy
+$ yarn add @dword-design/vue-consent-buefy
 ```
 
 Add to local components:
 
 ```html
 <script>
-import VueConsentBuefy from 'vue-consent-buefy'
+import BConsent from '@dword-design/vue-consent-buefy'
 
 export default {
   components: {
-    VueConsentBuefy,
+    BConsent,
   },
 }
 </script>
@@ -81,26 +81,24 @@ export default {
 Or register as a global component:
 
 ```js
-import Vue from 'vue'
-import VueConsentBuefy from 'vue-consent-buefy'
+import BConsent from '@dword-design/vue-consent-buefy'
 
-Vue.component('VueConsentBuefy', VueConsentBuefy)
+app.component('BConsent', BConsent)
 ```
 
 Or register as a plugin:
 
 ```js
-import Vue from 'vue'
-import VueConsentBuefy from 'vue-consent-buefy'
+import BConsent from '@dword-design/vue-consent-buefy'
 
-Vue.use(VueConsentBuefy)
+app.use(BConsent)
 ```
 
 ## Install via CDN
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-<script src="https://unpkg.com/vue-consent-buefy"></script>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="https://unpkg.com/@dword-design/vue-consent-buefy"></script>
 ```
 <!-- /INSTALL -->
 

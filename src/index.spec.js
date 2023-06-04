@@ -8,6 +8,8 @@ import nuxtDevReady from 'nuxt-dev-ready'
 import outputFiles from 'output-files'
 import kill from 'tree-kill-promise'
 
+const waitTransitionEnd = handle => handle.evaluate(el => new Promise(resolve => el.addEventListener('transitionend', () => resolve())))
+
 export default tester(
   {
     async modal() {
@@ -46,12 +48,13 @@ export default tester(
         `,
       })
 
-      const nuxt = execaCommand('nuxt dev', { stdio: 'inherit' })
+      const nuxt = execaCommand('nuxt dev')
       try {
         await nuxtDevReady()
         await this.page.goto('http://localhost:3000')
-        await this.page.waitForSelector('.modal')
-        await expect(this.page.screenshot()).toMatchImageSnapshot(this)
+        const modal = await this.page.waitForSelector('.modal')
+        await waitTransitionEnd(modal);
+        expect(await this.page.screenshot()).toMatchImageSnapshot(this)
         await this.page.click('button[type=submit]')
         await this.page.waitForSelector('.modal', { hidden: true })
       } finally {

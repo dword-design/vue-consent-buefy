@@ -7,7 +7,6 @@ import { execaCommand } from 'execa'
 import nuxtDevReady from 'nuxt-dev-ready'
 import outputFiles from 'output-files'
 import kill from 'tree-kill-promise'
-import waitForTransition from 'puppeteer-wait-for-transition'
 
 export default tester(
   {
@@ -51,9 +50,8 @@ export default tester(
       try {
         await nuxtDevReady()
         await this.page.goto('http://localhost:3000')
-
-        const modal = await this.page.waitForSelector('.modal')
-        await waitForTransition(modal)
+        await this.page.waitForSelector('.modal')
+        await delay(150)
         expect(await this.page.screenshot()).toMatchImageSnapshot(this)
         await this.page.click('button[type=submit]')
         await this.page.waitForSelector('.modal', { hidden: true })

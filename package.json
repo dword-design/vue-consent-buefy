@@ -23,6 +23,7 @@
     "test": "base test",
     "test:raw": "base test:raw"
   },
+  "dependencies": {},
   "devDependencies": {
     "@dword-design/base": "^10.0.3",
     "@dword-design/base-config-component": "^3.0.3",
@@ -38,7 +39,6 @@
     "nuxt": "^3.5.2",
     "nuxt-dev-ready": "^2.0.1",
     "output-files": "^2.0.28",
-    "puppeteer-wait-for-transition": "^1.0.1",
     "tree-kill-promise": "^3.0.14"
   },
   "engines": {

@@ -12827,6 +12827,11 @@ puppeteer-core@19.11.1:
     unbzip2-stream "1.4.3"
     ws "8.13.0"
 
+puppeteer-wait-for-transition@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/puppeteer-wait-for-transition/-/puppeteer-wait-for-transition-1.0.1.tgz#85f95bd489c621d432ef6910a85158bf6be0d48f"
+  integrity sha512-HU9lTcg3oqY0gQhY4XVPNP7bQ0989gSlPIcBR/5DqwxgeoTPa39QFQsQhKhar54F20/pDKy7l2byXGIiquDWnQ==
+
 puppeteer@^19.4.1:
   version "19.11.1"
   resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-19.11.1.tgz#bb75d518e87b0b4f6ef9bad1ea7e9d1cdcd18a5d"

@@ -1,4 +1,4 @@
-import { endent } from '@dword-design/functions'
+import { delay, endent } from '@dword-design/functions'
 import tester from '@dword-design/tester'
 import testerPluginPuppeteer from '@dword-design/tester-plugin-puppeteer'
 import testerPluginTmpDir from '@dword-design/tester-plugin-tmp-dir'
@@ -7,8 +7,7 @@ import { execaCommand } from 'execa'
 import nuxtDevReady from 'nuxt-dev-ready'
 import outputFiles from 'output-files'
 import kill from 'tree-kill-promise'
-
-const waitTransitionEnd = handle => handle.evaluate(el => new Promise(resolve => el.addEventListener('transitionend', () => resolve())))
+import waitForTransition from 'puppeteer-wait-for-transition'
 
 export default tester(
   {
@@ -52,8 +51,9 @@ export default tester(
       try {
         await nuxtDevReady()
         await this.page.goto('http://localhost:3000')
+
         const modal = await this.page.waitForSelector('.modal')
-        await waitTransitionEnd(modal);
+        await waitForTransition(modal)
         expect(await this.page.screenshot()).toMatchImageSnapshot(this)
         await this.page.click('button[type=submit]')
         await this.page.waitForSelector('.modal', { hidden: true })

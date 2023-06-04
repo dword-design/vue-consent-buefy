@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/dword-design/vue-consent-buefy/compare/v1.0.7...v2.0.0) (2023-06-04)
+
+
+### Bug Fixes
+
+* lock file maintenance ([#7](https://github.com/dword-design/vue-consent-buefy/issues/7)) ([99e5240](https://github.com/dword-design/vue-consent-buefy/commit/99e52403c665845ce58a1a421d58ebc74aa688e3))
+
+
+### BREAKING CHANGES
+
+* drop node 12 and 14, vue 3
+
 ## [1.0.7](https://github.com/dword-design/vue-consent-buefy/compare/v1.0.6...v1.0.7) (2022-09-21)
 
 

@@ -53,7 +53,7 @@ export default tester(
         await this.page.waitForSelector('.modal')
         await delay(150)
         expect(await this.page.screenshot()).toMatchImageSnapshot(this)
-        await this.page.click('button[type=submit]')
+        await this.page.click('button[name=accept-all]')
         await this.page.waitForSelector('.modal', { hidden: true })
       } finally {
         await kill(nuxt.pid)

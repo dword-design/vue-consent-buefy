@@ -108,7 +108,7 @@ export default {
     },
     submit($event) {
       if ($event.submitter.name === 'accept-all') {
-        this.$set(this.editedSettings, 'statistics', true)
+        this.editedSettings.statistics = true
       }
 
       return (this.$consent.settings = this.editedSettings)

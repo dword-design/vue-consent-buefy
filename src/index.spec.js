@@ -14,7 +14,7 @@ export default tester(
       await outputFiles({
         'nuxt.config.js': endent`
           export default {
-            css: ['@dword-design/nuxt-buefy/style.scss'],
+            css: ['@dword-design/nuxt-buefy/style'],
             modules: ['${packageName`@dword-design/nuxt-buefy`}'],
           }
         `,

@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/dword-design/vue-consent-buefy/compare/v2.0.1...v2.0.2) (2023-06-15)
+
+
+### Bug Fixes
+
+* lock file maintenance ([#16](https://github.com/dword-design/vue-consent-buefy/issues/16)) ([9327e2b](https://github.com/dword-design/vue-consent-buefy/commit/9327e2baedbcd8419003a1aa2faafb2844cbcfc5))
+
 ## [2.0.1](https://github.com/dword-design/vue-consent-buefy/compare/v2.0.0...v2.0.1) (2023-06-06)
 
 

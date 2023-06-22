@@ -42,7 +42,7 @@
                   : 'These cookies are needed to keep the website running.'
               "
             >
-              <b-switch :value="true" disabled>{{
+              <b-switch :model-value="true" disabled>{{
                 computedLocale === 'de'
                   ? 'Essenzielle Cookies'
                   : 'Essential cookies'

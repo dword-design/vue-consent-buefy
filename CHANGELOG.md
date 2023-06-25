@@ -1,3 +1,10 @@
+## [2.0.4](https://github.com/dword-design/vue-consent-buefy/compare/v2.0.3...v2.0.4) (2023-06-25)
+
+
+### Bug Fixes
+
+* fix privacy policy ([ea65c3a](https://github.com/dword-design/vue-consent-buefy/commit/ea65c3aa7b6e8532e257643fd7b2eb19fdf9ee13))
+
 ## [2.0.3](https://github.com/dword-design/vue-consent-buefy/compare/v2.0.2...v2.0.3) (2023-06-22)
 
 

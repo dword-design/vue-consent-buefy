@@ -85,57 +85,58 @@
   </b-modal>
 </template>
 
-<script>
+<script setup>
 import { BCardModal } from '@dword-design/buefy-addons'
-import { resolveComponent } from 'vue'
+import {
+  computed,
+  getCurrentInstance,
+  onMounted,
+  ref,
+  resolveComponent,
+  watch,
+} from 'vue'
+
+defineProps({ locale: String })
+
+const globalProps = getCurrentInstance().appContext.config.globalProperties
 
 const AppPrivacyPolicy = resolveComponent('app-privacy-policy')
 
-export default {
-  computed: {
-    computedLocale() {
-      return this.locale || this.$i18n?.locale || 'en'
-    },
-    isOpened() {
-      return this.$consent.isOpened
-    },
-  },
-  data: () => ({
-    editedSettings: {},
-  }),
-  methods: {
-    openPrivacyPolicy() {
-      return this.$buefy.modal.open({
-        component: BCardModal,
-        parent: this,
-        props: { inner: AppPrivacyPolicy },
-      })
-    },
-    submit($event) {
-      if ($event.submitter.name === 'accept-all') {
-        this.editedSettings.statistics = true
-      }
+const editedSettings = ref({})
 
-      return (this.$consent.settings = this.editedSettings)
-    },
-  },
-  mounted() {
-    if (Object.keys(this.$consent.settings).length === 0) {
-      this.$consent.open()
+const computedLocale = computed(
+  () => globalProps.locale || globalProps.$i18n?.locale || 'en',
+)
+
+const isOpened = computed(() => globalProps.$consent.isOpened)
+
+const openPrivacyPolicy = () =>
+  globalProps.$buefy.modal.open({
+    component: BCardModal,
+    props: { inner: AppPrivacyPolicy },
+  })
+
+const submit = $event => {
+  if ($event.submitter.name === 'accept-all') {
+    editedSettings.value.statistics = true
+  }
+  globalProps.$consent.settings = editedSettings.value
+}
+onMounted(() => {
+  if (Object.keys(globalProps.$consent.settings).length === 0) {
+    globalProps.$consent.open()
+  }
+})
+watch(
+  isOpened,
+  () => {
+    if (isOpened.value) {
+      editedSettings.value = {
+        statistics: false,
+        ...globalProps.$consent.settings,
+      }
     }
   },
-  props: {
-    locale: String,
-  },
-  watch: {
-    isOpened: {
-      handler() {
-        if (this.isOpened) {
-          this.editedSettings = { statistics: false, ...this.$consent.settings }
-        }
-      },
-      immediate: true,
-    },
-  },
-}
+  { immediate: true },
+)
 </script>

@@ -1,3 +1,10 @@
+## [2.0.5](https://github.com/dword-design/vue-consent-buefy/compare/v2.0.4...v2.0.5) (2023-06-25)
+
+
+### Bug Fixes
+
+* foo ([d8dc6a5](https://github.com/dword-design/vue-consent-buefy/commit/d8dc6a543566f1f252bf9e09143e12926739c177))
+
 ## [2.0.4](https://github.com/dword-design/vue-consent-buefy/compare/v2.0.3...v2.0.4) (2023-06-25)
 
 

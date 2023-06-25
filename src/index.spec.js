@@ -33,14 +33,8 @@ export default tester(
             <self />
           </template>
 
-          <script>
+          <script setup>
           import Self from '../../src/index.vue'
-
-          export default {
-            components: {
-              Self,
-            },
-          }
           </script>
         `,
         'plugins/vue-consent.js': endent`

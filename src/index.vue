@@ -96,7 +96,7 @@ import {
   watch,
 } from 'vue'
 
-defineProps({ locale: String })
+const props = defineProps({ locale: String })
 
 const globalProps = getCurrentInstance().appContext.config.globalProperties
 
@@ -105,7 +105,7 @@ const AppPrivacyPolicy = resolveComponent('app-privacy-policy')
 const editedSettings = ref({})
 
 const computedLocale = computed(
-  () => globalProps.locale || globalProps.$i18n?.locale || 'en',
+  () => props.locale || globalProps.$i18n?.locale || 'en',
 )
 
 const isOpened = computed(() => globalProps.$consent.isOpened)

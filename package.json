@@ -23,7 +23,9 @@
     "test": "base test",
     "test:raw": "base test:raw"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@dword-design/buefy-addons": "^2.0.14"
+  },
   "devDependencies": {
     "@dword-design/base": "^10.0.3",
     "@dword-design/base-config-component": "^3.0.3",
@@ -40,6 +42,9 @@
     "nuxt-dev-ready": "^2.0.1",
     "output-files": "^2.0.28",
     "tree-kill-promise": "^3.0.14"
+  },
+  "peerDependencies": {
+    "vue": "^3"
   },
   "engines": {
     "node": ">=16"

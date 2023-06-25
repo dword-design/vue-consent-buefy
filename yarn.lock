@@ -1264,7 +1264,7 @@
     "@babel/preset-env" "^7.6.3"
     "@babel/preset-typescript" "^7.13.0"
     "@dword-design/functions" "^4.0.0"
-    "@vue/babel-preset-jsx" "github:dword-design/jsx#fork-babel-preset-jsx"
+    "@vue/babel-preset-jsx" dword-design/jsx#fork-babel-preset-jsx
     babel-plugin-add-module-exports "^1.0.2"
     babel-plugin-macros "^3.0.1"
     babel-plugin-module-resolver "^4"
@@ -1286,7 +1286,7 @@
     "@babel/preset-env" "^7.6.3"
     "@babel/preset-typescript" "^7.13.0"
     "@dword-design/functions" "^4.0.0"
-    "@vue/babel-preset-jsx" "github:dword-design/jsx#fork-babel-preset-jsx"
+    "@vue/babel-preset-jsx" dword-design/jsx#fork-babel-preset-jsx
     babel-plugin-add-module-exports "^1.0.2"
     babel-plugin-macros "^3.0.1"
     babel-plugin-module-resolver "^5.0.0"
@@ -1394,7 +1394,7 @@
     tagged-template-noop "^2.1.1"
     yaml "^2.2.1"
 
-"@dword-design/buefy-addons@^2.0.0":
+"@dword-design/buefy-addons@^2.0.0", "@dword-design/buefy-addons@^2.0.14":
   version "2.0.14"
   resolved "https://registry.yarnpkg.com/@dword-design/buefy-addons/-/buefy-addons-2.0.14.tgz#e934c18ff211e76da1087d5990a9cd05f8de3c58"
   integrity sha512-kkv5BV9FbZEFzzo9ZQ9igNj8/qGwfQPRPEFl8eEHry6nY572I3w3+8/eLyJZdIAFDT/WZyYu2351VrRBAE2G0w==
@@ -3024,7 +3024,6 @@
 
 "@vue/babel-preset-jsx@github:dword-design/jsx#fork-babel-preset-jsx":
   version "1.1.2"
-  uid a73cb9961541a60a66b1b99a69a32e00bc66d336
   resolved "https://codeload.github.com/dword-design/jsx/tar.gz/a73cb9961541a60a66b1b99a69a32e00bc66d336"
   dependencies:
     "@vue/babel-helper-vue-jsx-merge-props" "^1.0.0"
@@ -3043,7 +3042,6 @@
 
 "@vue/babel-sugar-inject-h@dword-design/jsx#fork-babel-sugar-inject-h":
   version "1.1.2"
-  uid cc36a2200c059120f37944615fb2ec0e22f8f3cc
   resolved "https://codeload.github.com/dword-design/jsx/tar.gz/cc36a2200c059120f37944615fb2ec0e22f8f3cc"
   dependencies:
     "@babel/plugin-syntax-jsx" "^7.2.0"

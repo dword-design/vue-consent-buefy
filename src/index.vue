@@ -86,6 +86,11 @@
 </template>
 
 <script>
+import { BCardModal } from '@dword-design/buefy-addons'
+import { resolveComponent } from 'vue'
+
+const AppPrivacyPolicy = resolveComponent('app-privacy-policy')
+
 export default {
   computed: {
     computedLocale() {
@@ -101,9 +106,9 @@ export default {
   methods: {
     openPrivacyPolicy() {
       return this.$buefy.modal.open({
-        component: 'b-card-modal',
+        component: BCardModal,
         parent: this,
-        props: { inner: 'app-privacy-policy' },
+        props: { inner: AppPrivacyPolicy },
       })
     },
     submit($event) {

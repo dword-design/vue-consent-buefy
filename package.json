@@ -37,7 +37,7 @@
     "@dword-design/tester-plugin-tmp-dir": "^2.1.26",
     "@dword-design/vue-consent": "^2.0.0",
     "depcheck-package-name": "^3.0.0",
-    "execa": "^7.1.1",
+    "execa": "^8.0.0",
     "nuxt": "^3.5.2",
     "nuxt-dev-ready": "^2.0.1",
     "output-files": "^2.0.28",

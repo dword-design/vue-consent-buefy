@@ -27,7 +27,7 @@
     "@dword-design/buefy-addons": "^2.0.14"
   },
   "devDependencies": {
-    "@dword-design/base": "^10.0.3",
+    "@dword-design/base": "^12.0.0",
     "@dword-design/base-config-component": "^3.0.3",
     "@dword-design/functions": "^5.0.20",
     "@dword-design/nuxt-buefy": "^3.0.2",
